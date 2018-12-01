@@ -28,7 +28,6 @@ class NotesTableViewController: UITableViewController {
         return NoteController.shared.notes.count
     }
     
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NoteCell", for: indexPath)
         let note = NoteController.shared.notes[indexPath.row]
@@ -57,7 +56,6 @@ class NotesTableViewController: UITableViewController {
         NoteController.shared.notes.insert(itemToMove, at: destinationIndexPath.row)
         NoteController.shared.saveToPersistentStore()
     }
-    
     
     // MARK: - Navigation
     
